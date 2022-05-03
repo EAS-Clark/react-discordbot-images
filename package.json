@@ -1,35 +1,48 @@
 {
-  "name": "discordbot-images",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "node src/app.js",
-    "test": "nodemon src/app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EAS-Clark/DiscordBot-Images.git"
-  },
-  "keywords": [
-    "Discord"
-  ],
-  "author": "Clark Brooks",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EAS-Clark/DiscordBot-Images/issues"
-  },
-  "homepage": "https://github.com/EAS-Clark/DiscordBot-Images#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
+  "name": "react-discordbot-images",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
     "diskusage": "^1.1.3",
     "express": "^4.17.3",
     "express-fileupload": "^1.3.1",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
     "promise": "^8.1.0",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0" 
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

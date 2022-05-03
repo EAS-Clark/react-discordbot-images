@@ -1,28 +1,25 @@
+import logo from './logo.svg';
+import './App.css';
 
-const express = require('express');
-const fileUpload = require('express-fileupload');
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
 
-const path = require('path');
-const app = express();
-
-const fs = require("fs");
-
-
-app.use(express.static('public'));
-app.use(express.text());
-app.use(fileUpload());
-app.use(express.raw({ type: 'image/*', limit: '5mb' }));
-
-
-
-
-fs.readdirSync(path.join(__dirname, "routes")).forEach(function(file) {
-  if (file[0] === ".") {
-    return;
-  }
-  require(path.join(__dirname, "routes", file))(app);
-});
-
-app.listen(3000, () => {
-  console.log('listening on port 3000');
-});
+export default App;
